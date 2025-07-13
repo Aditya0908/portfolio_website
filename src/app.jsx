@@ -1587,11 +1587,11 @@ function Contact() {
           </div>
           
           <div className="flex flex-col gap-4">
-            <Button className="w-full">
+            <Button className="w-full" onClick={() => window.location.href = 'mailto:adityashishjain@gmail.com'}>
               <Mail className="w-4 h-4 mr-2" />
               Send Email
             </Button>
-            <Button variant="secondary" className="w-full">
+            <Button variant="secondary" className="w-full"onClick={() => window.open('src/aditya_resume.pdf' ,'_blank')}>
               <Download className="w-4 h-4 mr-2" />
               Download Resume
             </Button>
