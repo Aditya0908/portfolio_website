@@ -1223,7 +1223,7 @@ function About() {
     {
       year: "2020 - 2024",
       title: "Computer Science Student",
-      company: "University",
+      company: "Vellore Institute Of Technology",
       description: "Built foundation in AI/ML, robotics, and computer vision with hands-on projects."
     }
   ];
