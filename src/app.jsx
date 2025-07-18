@@ -1311,9 +1311,10 @@ function About() {
 function Projects() {
   const projects = [
     {
-      title: "ROS2 Object Detection & Scene Annotation",
-      description: "Advanced ROS2 system with YOLO integration for real-time object detection, 360° rotation capabilities, TF publishing, and intelligent scene annotation. Features OpenAI Vision integration for enhanced object recognition and re-identification.",
-      tech: ["ROS2", "Python", "YOLO", "OpenAI Vision", "TensorFlow"],
+      title: "Autonomous Segmentation & YOLO Training Pipeline",
+      description: "Built a self-hosted pipeline using SAM2 for video-based object segmentation and YOLOv5/v8 for automated model training.Users upload a video + YAML class map → select objects once → pipeline auto-generates YOLO-format .txt labels and a segmented video.Trained models are produced via an integrated YOLO backend with support for:Version selection (v5/v8)Custom hyperparametersAuto-generated best.pt + mAP/precision metrics",
+      use_case: "Local alternative to RoboFlow for scalable, private dataset creation and model training.",
+      tech: ["OpenCV", "Python", "YOLO", "PyTorch", "SAM2"],
       github: "https://github.com/yourgithub/ros2-object-annotation",
       status: "completed",
       icon: "🎯",
