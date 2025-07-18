@@ -1312,14 +1312,20 @@ function Projects() {
   const projects = [
     {
       title: "Autonomous Segmentation & YOLO Training Pipeline",
-      description: "Built a self-hosted pipeline using SAM2 for video-based object segmentation and YOLOv5/v8 for automated model training.Users upload a video + YAML class map → select objects once → pipeline auto-generates YOLO-format .txt labels and a segmented video.Trained models are produced via an integrated YOLO backend with support for:Version selection (v5/v8)Custom hyperparametersAuto-generated best.pt + mAP/precision metrics",
-      use_case: "Local alternative to RoboFlow for scalable, private dataset creation and model training.",
-      tech: ["OpenCV", "Python", "YOLO", "PyTorch", "SAM2"],
+      description:
+        "Designed and implemented a self-hosted pipeline using SAM2 for object segmentation from video inputs, integrated with YOLOv5/v8 for automated model training. Users upload a video and YAML class map, select objects once, and the system auto-generates YOLO-format `.txt` labels and a segmented video. The training module supports YOLO version selection, custom hyperparameters, and outputs best.pt along with mAP/precision metrics.",
+      use_case:
+        "Offline alternative to RoboFlow for privacy-preserving, scalable object detection dataset generation and training.",
+      tech: ["Python", "OpenCV", "SAM2", "YOLOv5", "YOLOv8", "PyTorch", "YAML"],
       github: "https://github.com/yourgithub/ros2-object-annotation",
       status: "completed",
       icon: "🎯",
-      highlights: ["Real-time Detection", "360° Coverage", "AI Vision Integration"],
-      metrics: "95% accuracy"
+      highlights: [
+        "YOLO-compatible Auto-labeling",
+        "Versioned Training with Metrics",
+        "End-to-End Offline Workflow",
+      ],
+      metrics: "95% mAP on custom dataset"
     },
     {
       title: "Neo4j Robotics Knowledge Graph",
