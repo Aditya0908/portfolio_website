@@ -1317,7 +1317,7 @@ function Projects() {
       use_case:
         "Offline alternative to RoboFlow for privacy-preserving, scalable object detection dataset generation and training.",
       tech: ["Python", "OpenCV", "SAM2", "YOLOv5", "YOLOv8", "PyTorch", "YAML"],
-      github: "https://github.com/yourgithub/ros2-object-annotation",
+      // github: "https://github.com/yourgithub/ros2-object-annotation",
       status: "completed",
       icon: "🎯",
       highlights: [
@@ -1328,15 +1328,23 @@ function Projects() {
       metrics: "95% mAP on custom dataset"
     },
     {
-      title: "Neo4j Robotics Knowledge Graph",
-      description: "Intelligent spatial computing system that creates dynamic knowledge graphs of robot environments. Features real-time object pose logging, complex spatial relationship mapping, and sophisticated nearest-neighbor queries.",
-      tech: ["Neo4j", "ROS2", "Python", "Graph Database", "Spatial Computing"],
-      github: "https://github.com/yourgithub/ros2-neo4j-graph",
+      title: "SpatialScene: ROS2 Semantic Mapping & Object Graph Logger",
+      description:
+        "Engineered a ROS2 system that detects objects via YOLOv5, computes their positions in both robot (base_link) and global (map) frames using TF2, and logs annotated data into a Neo4j knowledge graph. Supports proximity-based scene querying, semantic localization, and memory-based re-alignment for re-identifying objects during revisits. Built with modular ROS2 nodes and integrates OpenAI Vision for optional scene descriptions.",
+      use_case:
+        "Persistent scene memory and semantic map-building for autonomous robots operating in dynamic or repetitive environments.",
+      tech: ["ROS2", "Python", "Neo4j", "TF2", "OpenAI Vision", "Transformations"],
+      // github: "https://github.com/yourgithub/distance_calculator",
       status: "completed",
-      icon: "🕸️",
-      highlights: ["Graph Intelligence", "Spatial Relations", "Real-time Queries"],
-      metrics: "1000+ nodes"
-    },
+      icon: "🧠",
+      highlights: [
+        "YOLO-based Object Detection in ROS2",
+        "Map-Frame Localization via TF",
+        "Neo4j Scene Graph Logging & Querying"
+      ],
+      metrics: "50+ object instances logged with 92% map-frame consistency across test runs"
+},
+
     {
       title: "Perception Pipeline for Ground Segmentation",
       description: "High-performance ROS2 C++ perception system using RealSense D435i and PCL for advanced ground segmentation, precise object boundary extraction, and real-time 3D visualization in RViz2.",
@@ -1346,24 +1354,35 @@ function Projects() {
       highlights: ["Real-time Processing", "3D Visualization", "High Precision"],
       metrics: "30 FPS"
     },
+    // {
+    //   title: "Voice-Enabled Contextual AI Assistant",
+    //   description: "Sophisticated conversational AI with continuous listening capabilities, contextual memory management, and natural voice interaction. Features advanced NLP processing and intelligent response generation.",
+    //   tech: ["Python", "OpenAI API", "TTS", "STT", "NLP"],
+    //   status: "completed",
+    //   icon: "🗣️",
+    //   highlights: ["Voice Control", "Context Memory", "Natural Language"],
+    //   metrics: "< 500ms response"
+    // },
     {
-      title: "Voice-Enabled Contextual AI Assistant",
-      description: "Sophisticated conversational AI with continuous listening capabilities, contextual memory management, and natural voice interaction. Features advanced NLP processing and intelligent response generation.",
-      tech: ["Python", "OpenAI API", "TTS", "STT", "NLP"],
-      status: "completed",
-      icon: "🗣️",
-      highlights: ["Voice Control", "Context Memory", "Natural Language"],
-      metrics: "< 500ms response"
-    },
-    {
-      title: "Autonomous Navigation System",
-      description: "Next-generation path planning system with advanced obstacle avoidance, multi-sensor fusion, and dynamic environment adaptation. Features SLAM integration and real-time decision making.",
-      tech: ["ROS2", "Path Planning", "Sensor Fusion", "SLAM"],
-      status: "coming-soon",
-      icon: "🚀",
-      highlights: ["Smart Navigation", "Multi-sensor Fusion", "Dynamic Adaptation"],
-      metrics: "Planning..."
-    },
+      title: "Perceptual Autonomy Stack: Multi-Modal Spatial Intelligence for Mobile Robots",
+      description:
+        "Engineered a fully modular spatial intelligence architecture with dynamic environment adaptation in ROS2 that fuses LiDAR, RGB, and depth data from Intel RealSense D435i for real-time perception, object-aware localization, and autonomous navigation. The system performs 360° semantic scene annotation, transforms detections into the global (map) frame, and persists spatially anchored object graphs in Neo4j. Upon re-entry into a known environment, the robot aligns itself, detects the current frame’s object set, verifies spatial feasibility against the occupancy grid, and triggers closed-loop navigation via Nav2 to dynamically reachable semantic goals.",
+      use_case:
+        "SLAM-light perceptual autonomy for mobile robots — ideal for indoor search, semantic patrol, memory-guided navigation, and re-identification tasks where environment context is object-centric rather than geometry-centric.",
+      tech: ["ROS2", "Neo4j", "TF2", "LiDAR", "Nav2", "OccupancyGrid", "OpenCV", "Depth", "RealSense D435i"],
+      // github: "https://github.com/yourgithub/perceptual-autonomy",
+      status: "in-progress",
+      icon: "🧠",
+      highlights: [
+        "Multi-Modal Sensor Fusion Pipeline",
+        "Global Object Pose Anchoring with TF2",
+        "Graph-Based Memory and Goal Recall",
+        "Nav2-Driven Autonomous Goal Execution"
+      ],
+      metrics:
+        "Object re-identification accuracy: 93% | Map-frame alignment error < 0.5m | Autonomous goal reach rate: 87% | End-to-end latency per 90° cycle: ~2.5s"
+},
+
     {
       title: "Real-time Robot Fleet Dashboard",
       description: "Comprehensive monitoring and control system for robot fleet management. Features real-time analytics, predictive maintenance alerts, and interactive 3D visualization of robot operations.",
@@ -1451,37 +1470,39 @@ function Skills() {
   
   const skillCategories = {
     'Core': [
-      { name: "ROS2", icon: "🤖", level: "Expert" },
-      { name: "Python", icon: "🐍", level: "Advanced" },
-      { name: "Computer Vision", icon: "👁️", level: "Advanced" },
-      { name: "Machine Learning", icon: "🧠", level: "Advanced" },
-      { name: "YOLO", icon: "🎯", level: "Expert" },
-      { name: "OpenCV", icon: "📸", level: "Advanced" }
+      { name: "ROS2", icon: "🤖", level: "Proficient" },
+      { name: "Python", icon: "🐍", level: "Proficient" },
+      { name: "Computer Vision", icon: "👁️", level: "Proficient" },
+      { name: "Machine Learning", icon: "🧠", level: "Novice" },
+      { name: "YOLO", icon: "🎯", level: "Proficient" },
+      { name: "OpenCV", icon: "📸", level: "Proficient" }
     ],
     'Robotics': [
-      { name: "PCL", icon: "☁️", level: "Advanced" },
+      { name: "PCL", icon: "☁️", level: "Novice" },
       { name: "RealSense", icon: "📡", level: "Advanced" },
-      { name: "SLAM", icon: "🗺️", level: "Intermediate" },
-      { name: "RViz2", icon: "📊", level: "Advanced" },
-      { name: "Gazebo", icon: "🌍", level: "Intermediate" },
-      { name: "Navigation", icon: "🧭", level: "Advanced" }
+      { name: "SLAM", icon: "🗺️", level: "Novice" },
+      { name: "RViz2", icon: "📊", level: "Proficient" },
+      { name: "Gazebo", icon: "🌍", level: "Novice" },
+      { name: "Navigation", icon: "🧭", level: "Proficient" }
     ],
     'Development': [
-      { name: "C++", icon: "⚡", level: "Intermediate" },
-      { name: "TensorFlow", icon: "🔥", level: "Advanced" },
-      { name: "Neo4j", icon: "🕸️", level: "Intermediate" },
-      { name: "Docker", icon: "🐳", level: "Intermediate" },
-      { name: "Git", icon: "🔀", level: "Advanced" },
-      { name: "Linux", icon: "🐧", level: "Advanced" }
+      { name: "C++", icon: "⚡", level: "Novice" },
+      { name: "Neo4j", icon: "🕸️", level: "Proficient" },
+      { name: "Docker", icon: "🐳", level: "Proficient" },
+      { name: "Git", icon: "🔀", level: "Proficient" },
+      { name: "Linux", icon: "🐧", level: "Proficient" },
+      { name: "OpenAI API", icon: "🤖", level: "Proficient" },
+      { name: "JavaScript", icon: "💛", level: "Novice" },
     ],
-    'AI/Cloud': [
-      { name: "OpenAI API", icon: "🤖", level: "Advanced" },
-      { name: "JavaScript", icon: "💛", level: "Intermediate" },
-      { name: "React", icon: "⚛️", level: "Intermediate" },
-      { name: "Node.js", icon: "🟢", level: "Intermediate" },
-      { name: "MongoDB", icon: "🍃", level: "Intermediate" },
-      { name: "AWS", icon: "☁️", level: "Beginner" }
-    ]
+    'Other': [
+    { name: "Figma", icon: "🎨", level: "Proficient" },
+    { name: "Business Development", icon: "📈", level: "Proficient" },
+    { name: "Notion", icon: "📝", level: "Proficient" },  
+    { name: "UI/UX Design", icon: "🖌️", level: "Proficient" },
+    { name: "Canva", icon: "🎭", level: "Proficient" },
+    { name: "Public Speaking", icon: "🎤", level: "Proficient" }
+  ]
+
   };
 
   return (
