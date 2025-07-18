@@ -1373,7 +1373,7 @@ function Projects() {
       ],
       metrics:
         "Object re-identification accuracy: 93% | Map-frame alignment error < 0.5m | Autonomous goal reach rate: 87% | End-to-end latency per 90° cycle: ~2.5s"
-},
+    },
 
     {
       title: "Real-time Robot Fleet Dashboard",
