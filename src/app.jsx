@@ -1468,81 +1468,81 @@ function Projects() {
 
 
     <section id="projects" className="py-20 max-w-6xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-        <p className="text-xl text-gray-400">Some of the things I've built and currently working on</p>
-      </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-xl text-gray-400">Some of the things I've built and currently working on</p>
+          </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <GlassCard 
-            key={index} 
-            className={`group hover:scale-105 transition-all duration-300 relative overflow-hidden ${
-              projects.length % 2 !== 0 && index === projects.length - 1 
-                ? 'md:col-span-2 md:max-w-2xl md:mx-auto' 
-                : ''
-            }`}
-          >
-            {/* Background gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            
-            <div className="relative z-10">
-              <div className="flex justify-between items-start mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="text-3xl">{project.icon}</div>
-                  <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
-                    {project.title}
-                  </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:grid-rows-[auto] md:items-start">
+            {projects.map((project, index) => (
+              <GlassCard 
+                key={index} 
+                className={`group hover:scale-105 transition-all duration-300 relative overflow-hidden ${
+                  projects.length % 2 !== 0 && index === projects.length - 1 
+                    ? 'md:col-span-2 md:max-w-2xl md:mx-auto' 
+                    : ''
+                }`}
+              >
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="text-3xl">{project.icon}</div>
+                      <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                        {project.title}
+                      </h3>
+                    </div>
+                    {project.status === "coming-soon" && (
+                      <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-xs px-2 py-1 rounded-full animate-pulse">
+                        Coming Soon
+                      </span>
+                    )}
+                  </div>
+                  
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+                  
+                  {/* Highlights */}
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {project.highlights.map((highlight, i) => (
+                      <span key={i} className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-xs px-2 py-1 rounded-full border border-blue-500/30">
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, i) => (
+                      <span key={i} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded border border-gray-700/50">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Metrics and GitHub */}
+                  <div className="flex justify-between items-center">
+                    <div className="text-xs text-green-400 font-medium">
+                      {project.metrics}
+                    </div>
+                    {project.github && (
+                      <a href={project.github} target="_blank" className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
+                        <Github className="w-4 h-4" />
+                        Code
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-                {project.status === "coming-soon" && (
-                  <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-xs px-2 py-1 rounded-full animate-pulse">
-                    Coming Soon
-                  </span>
-                )}
-              </div>
-              
-              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                {project.description}
-              </p>
-              
-              {/* Highlights */}
-              <div className="flex flex-wrap gap-1 mb-4">
-                {project.highlights.map((highlight, i) => (
-                  <span key={i} className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-xs px-2 py-1 rounded-full border border-blue-500/30">
-                    {highlight}
-                  </span>
-                ))}
-              </div>
-              
-              {/* Tech stack */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((tech, i) => (
-                  <span key={i} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded border border-gray-700/50">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              
-              {/* Metrics and GitHub */}
-              <div className="flex justify-between items-center">
-                <div className="text-xs text-green-400 font-medium">
-                  {project.metrics}
-                </div>
-                {project.github && (
-                  <a href={project.github} target="_blank" className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
-                    <Github className="w-4 h-4" />
-                    Code
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                )}
-              </div>
-            </div>
-          </GlassCard>
-        ))}
-      </div>
-    </section>
-  );
-}
+              </GlassCard>
+            ))}
+          </div>
+        </section>
+      );
+    }
 
 function Skills() {
   const [activeCategory, setActiveCategory] = useState('Core');
