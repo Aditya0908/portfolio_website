@@ -1345,15 +1345,15 @@ function Projects() {
       metrics: "50+ object instances logged with 92% map-frame consistency across test runs"
 },
 
-    {
-      title: "Perception Pipeline for Ground Segmentation",
-      description: "High-performance ROS2 C++ perception system using RealSense D435i and PCL for advanced ground segmentation, precise object boundary extraction, and real-time 3D visualization in RViz2.",
-      tech: ["ROS2", "C++", "PCL", "RealSense", "RViz2"],
-      status: "completed",
-      icon: "👁️",
-      highlights: ["Real-time Processing", "3D Visualization", "High Precision"],
-      metrics: "30 FPS"
-    },
+    // {
+    //   title: "Perception Pipeline for Ground Segmentation",
+    //   description: "High-performance ROS2 C++ perception system using RealSense D435i and PCL for advanced ground segmentation, precise object boundary extraction, and real-time 3D visualization in RViz2.",
+    //   tech: ["ROS2", "C++", "PCL", "RealSense", "RViz2"],
+    //   status: "completed",
+    //   icon: "👁️",
+    //   highlights: ["Real-time Processing", "3D Visualization", "High Precision"],
+    //   metrics: "30 FPS"
+    // },
     // {
     //   title: "Voice-Enabled Contextual AI Assistant",
     //   description: "Sophisticated conversational AI with continuous listening capabilities, contextual memory management, and natural voice interaction. Features advanced NLP processing and intelligent response generation.",
