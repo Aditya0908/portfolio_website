@@ -1343,7 +1343,7 @@ function Projects() {
         "Neo4j Scene Graph Logging & Querying"
       ],
       metrics: "50+ object instances logged with 92% map-frame consistency across test runs"
-},
+    },
 
     
     // {
