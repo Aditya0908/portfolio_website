@@ -277,7 +277,7 @@
 
 //   useEffect(() => {
 //     const currentWord = words[currentWordIndex];
-    
+
 //     const timeout = setTimeout(() => {
 //       if (!isDeleting) {
 //         // Typing
@@ -485,9 +485,9 @@
 //             Contact
 //           </button>
 //         </nav>
-        
+
 //         {renderContent()}
-        
+
 //         <footer className="mt-20 text-center text-gray-500 text-sm">
 //           © {new Date().getFullYear()} Aditya Jain. Built with React, Tailwind.
 //         </footer>
@@ -542,7 +542,7 @@
 
 //   useEffect(() => {
 //     const currentWord = words[currentWordIndex];
-    
+
 //     const timeout = setTimeout(() => {
 //       if (!isDeleting) {
 //         if (currentText.length < currentWord.length) {
@@ -586,7 +586,7 @@
 //     secondary: "bg-white/10 border border-white/20 hover:bg-white/20 text-white",
 //     outline: "border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
 //   };
-  
+
 //   return (
 //     <button
 //       {...props}
@@ -641,11 +641,11 @@
 //               <span className="animate-pulse text-blue-400">|</span>
 //             </span>
 //           </h1>
-          
+
 //           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
 //             Passionate about integrating AI with real-world robotics applications
 //           </p>
-          
+
 //           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
 //             <span className="flex items-center gap-1">
 //               <Cpu className="w-4 h-4" />
@@ -839,11 +839,11 @@
 //                 </span>
 //               )}
 //             </div>
-            
+
 //             <p className="text-gray-400 text-sm mb-4 leading-relaxed">
 //               {project.description}
 //             </p>
-            
+
 //             <div className="flex flex-wrap gap-2 mb-4">
 //               {project.tech.map((tech, i) => (
 //                 <span key={i} className="bg-blue-500/20 text-blue-400 text-xs px-2 py-1 rounded">
@@ -851,7 +851,7 @@
 //                 </span>
 //               ))}
 //             </div>
-            
+
 //             {project.github && (
 //               <a href={project.github} target="_blank" className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
 //                 <Github className="w-4 h-4" />
@@ -938,7 +938,7 @@
 //               </a>
 //             </div>
 //           </div>
-          
+
 //           <div className="flex flex-col gap-4">
 //             <Button className="w-full">
 //               <Mail className="w-4 h-4 mr-2" />
@@ -962,14 +962,14 @@
 //   return (
 //     <div className={`min-h-screen transition-all duration-300 ${darkMode ? 'bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white' : 'bg-gradient-to-br from-gray-100 via-white to-gray-50 text-gray-900'}`}>
 //       <FloatingElements />
-      
+
 //       <main className="relative z-10 min-h-screen font-sans px-6">
 //         <Hero toggleTheme={toggleTheme} darkMode={darkMode} />
 //         <About />
 //         <Projects />
 //         <Skills />
 //         <Contact />
-        
+
 //         <footer className="py-12 text-center text-gray-500 text-sm border-t border-gray-800">
 //           <p>© {new Date().getFullYear()} Aditya Jain. Built with React & Tailwind CSS.</p>
 //           <p className="mt-2">Inspired by modern portfolio designs • Made with ❤️</p>
@@ -1031,10 +1031,10 @@ function useTypewriter(words, typeSpeed = 70, deleteSpeed = 50, delaySpeed = 100
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
-  
+
   useEffect(() => {
     const currentWord = words[currentWordIndex];
-    
+
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         if (currentText.length < currentWord.length) {
@@ -1078,7 +1078,7 @@ const Button = ({ children, variant = "primary", ...props }) => {
     secondary: "bg-white/10 border border-white/20 hover:bg-white/20 text-white",
     outline: "border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
   };
-  
+
   return (
     <button
       {...props}
@@ -1093,9 +1093,9 @@ function FloatingElements() {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
       <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute top-40 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
-      <div className="absolute bottom-20 left-20 w-24 h-24 bg-green-500/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
-      <div className="absolute bottom-40 right-10 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse" style={{animationDelay: '3s'}}></div>
+      <div className="absolute top-40 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-green-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-40 right-10 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '3s' }}></div>
     </div>
   );
 }
@@ -1143,11 +1143,11 @@ function Hero({ toggleTheme, darkMode }) {
               <span className="animate-pulse text-blue-400">|</span>
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
             Passionate about integrating AI with real-world robotics applications
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
             <span className="flex items-center gap-1">
               <Cpu className="w-4 h-4" />
@@ -1270,7 +1270,7 @@ function About() {
                 </linearGradient>
               </defs>
             </svg>
-            
+
             <div className="relative space-y-12 py-8">
               {journey.map((item, index) => (
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-8`}>
@@ -1285,7 +1285,7 @@ function About() {
                     </div>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 blur-lg opacity-30 animate-pulse"></div>
                   </div>
-                  
+
                   {/* Content card */}
                   <div className={`flex-1 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
                     <GlassCard className="hover:scale-105 transition-all duration-300">
@@ -1345,7 +1345,7 @@ function Projects() {
       metrics: "50+ object instances logged with 92% map-frame consistency across test runs"
     },
 
-    
+
     // {
     //   title: "Voice-Enabled Contextual AI Assistant",
     //   description: "Sophisticated conversational AI with continuous listening capabilities, contextual memory management, and natural voice interaction. Features advanced NLP processing and intelligent response generation.",
@@ -1396,15 +1396,93 @@ function Projects() {
   ];
 
   return (
+//     <section id="projects" className="py-20 max-w-6xl mx-auto">
+//       <div className="text-center mb-16">
+//         <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+//         <p className="text-xl text-gray-400">Some of the things I've built and currently working on</p>
+//       </div>
+
+//       <div className="grid md:grid-cols-2 gap-8">
+//         {projects.map((project, index) => (
+//           <GlassCard key={index} className="group hover:scale-105 transition-all duration-300 relative overflow-hidden">
+//             {/* Background gradient overlay */}
+//             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+//             <div className="relative z-10">
+//               <div className="flex justify-between items-start mb-4">
+//                 <div className="flex items-center gap-3">
+//                   <div className="text-3xl">{project.icon}</div>
+//                   <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+//                     {project.title}
+//                   </h3>
+//                 </div>
+//                 {project.status === "coming-soon" && (
+//                   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-xs px-2 py-1 rounded-full animate-pulse">
+//                     Coming Soon
+//                   </span>
+//                 )}
+//               </div>
+
+//               <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+//                 {project.description}
+//               </p>
+
+//               {/* Highlights */}
+//               <div className="flex flex-wrap gap-1 mb-4">
+//                 {project.highlights.map((highlight, i) => (
+//                   <span key={i} className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-xs px-2 py-1 rounded-full border border-blue-500/30">
+//                     {highlight}
+//                   </span>
+//                 ))}
+//               </div>
+
+//               {/* Tech stack */}
+//               <div className="flex flex-wrap gap-2 mb-4">
+//                 {project.tech.map((tech, i) => (
+//                   <span key={i} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded border border-gray-700/50">
+//                     {tech}
+//                   </span>
+//                 ))}
+//               </div>
+
+//               {/* Metrics and GitHub */}
+//               <div className="flex justify-between items-center">
+//                 <div className="text-xs text-green-400 font-medium">
+//                   {project.metrics}
+//                 </div>
+//                 {project.github && (
+//                   <a href={project.github} target="_blank" className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
+//                     <Github className="w-4 h-4" />
+//                     Code
+//                     <ExternalLink className="w-3 h-3" />
+//                   </a>
+//                 )}
+//               </div>
+//             </div>
+//           </GlassCard>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+
+
     <section id="projects" className="py-20 max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
         <p className="text-xl text-gray-400">Some of the things I've built and currently working on</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <GlassCard key={index} className="group hover:scale-105 transition-all duration-300 relative overflow-hidden">
+          <GlassCard 
+            key={index} 
+            className={`group hover:scale-105 transition-all duration-300 relative overflow-hidden ${
+              projects.length % 2 !== 0 && index === projects.length - 1 
+                ? 'md:col-span-2 md:max-w-2xl md:mx-auto' 
+                : ''
+            }`}
+          >
             {/* Background gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
@@ -1468,7 +1546,7 @@ function Projects() {
 
 function Skills() {
   const [activeCategory, setActiveCategory] = useState('Core');
-  
+
   const skillCategories = {
     'Core': [
       { name: "ROS2", icon: "🤖", level: "Proficient" },
@@ -1496,13 +1574,13 @@ function Skills() {
       { name: "JavaScript", icon: "💛", level: "Novice" },
     ],
     'Other': [
-    { name: "Figma", icon: "🎨", level: "Proficient" },
-    { name: "Business Development", icon: "📈", level: "Proficient" },
-    { name: "Notion", icon: "📝", level: "Proficient" },  
-    { name: "UI/UX Design", icon: "🖌️", level: "Proficient" },
-    { name: "Canva", icon: "🎭", level: "Proficient" },
-    { name: "Public Speaking", icon: "🎤", level: "Proficient" }
-  ]
+      { name: "Figma", icon: "🎨", level: "Proficient" },
+      { name: "Business Development", icon: "📈", level: "Proficient" },
+      { name: "Notion", icon: "📝", level: "Proficient" },
+      { name: "UI/UX Design", icon: "🖌️", level: "Proficient" },
+      { name: "Canva", icon: "🎭", level: "Proficient" },
+      { name: "Public Speaking", icon: "🎤", level: "Proficient" }
+    ]
 
   };
 
@@ -1520,11 +1598,10 @@ function Skills() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === category
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                  : 'text-gray-400 hover:text-white hover:bg-white/10'
-              }`}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
+                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
+                : 'text-gray-400 hover:text-white hover:bg-white/10'
+                }`}
             >
               {category}
             </button>
@@ -1546,17 +1623,16 @@ function Skills() {
               </div>
               <div className="text-center">
                 <div className="font-medium text-sm">{skill.name}</div>
-                <div className={`text-xs mt-1 px-2 py-1 rounded-full ${
-                  skill.level === 'Expert' ? 'bg-green-500/20 text-green-400' :
+                <div className={`text-xs mt-1 px-2 py-1 rounded-full ${skill.level === 'Expert' ? 'bg-green-500/20 text-green-400' :
                   skill.level === 'Advanced' ? 'bg-blue-500/20 text-blue-400' :
-                  skill.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                  'bg-gray-500/20 text-gray-400'
-                }`}>
+                    skill.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-gray-500/20 text-gray-400'
+                  }`}>
                   {skill.level}
                 </div>
               </div>
             </div>
-            
+
             {/* Hover effect gradient */}
             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
@@ -1614,13 +1690,13 @@ function Contact() {
               </a>
             </div>
           </div>
-          
+
           <div className="flex flex-col gap-4">
             <Button className="w-full" onClick={() => window.location.href = 'mailto:adityashishjain@gmail.com'}>
               <Mail className="w-4 h-4 mr-2" />
               Send Email
             </Button>
-            <Button variant="secondary" className="w-full"onClick={() => window.open('src/aditya_resume.pdf' ,'_blank')}>
+            <Button variant="secondary" className="w-full" onClick={() => window.open('src/aditya_resume.pdf', '_blank')}>
               <Download className="w-4 h-4 mr-2" />
               Download Resume
             </Button>
@@ -1638,14 +1714,14 @@ export default function App() {
   return (
     <div className={`min-h-screen transition-all duration-300 ${darkMode ? 'bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white' : 'bg-gradient-to-br from-gray-100 via-white to-gray-50 text-gray-900'}`}>
       <FloatingElements />
-      
+
       <main className="relative z-10 min-h-screen font-sans px-6">
         <Hero toggleTheme={toggleTheme} darkMode={darkMode} />
         <About />
         <Projects />
         <Skills />
         <Contact />
-        
+
         <footer className="py-12 text-center text-gray-500 text-sm border-t border-gray-800">
           <p>© {new Date().getFullYear()} Aditya Jain. Built with React & Tailwind CSS.</p>
           <p className="mt-2">Inspired by modern portfolio designs • Made with ❤️</p>
