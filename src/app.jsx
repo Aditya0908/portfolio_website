@@ -1378,35 +1378,34 @@ function Projects() {
 
 
     {
-      title: "Perceptual Autonomy Stack: Open-Vocabulary Spatial Intelligence for Mobile Robots",
-      description:
-        "Designed and implemented a modular perception stack in ROS2 that integrates GroundingDINO for natural-language-grounded object detection and Segment Anything (SAM) for high-fidelity instance segmentation, fused with depth from Intel RealSense D435i for real-time 3D scene understanding. The system transforms segmented object poses into the global (map) frame via TF2, anchors them into a persistent Neo4j spatial memory graph, and enables semantic re-identification upon revisiting known spaces. Leveraging Nav2, the robot autonomously navigates to dynamically reachable semantic goals, verifying spatial feasibility against the occupancy grid and adapting to changes in object layout.",
+      title: "Prompt-Guided Perceptual Navigation: Real-Time Object Search & Tracking for Quadruped Robots",
+      description:    
+        "Developed a real-time visual grounding and tracking pipeline for quadruped robots using GroundingDINO (CLIP-based) for open-vocabulary object detection based on natural language prompts, paired with Segment Anything (SAM) for precise instance segmentation. The system operates live in dynamic environments, continuously detecting and re-identifying the target object while the robot performs on-the-fly path planning to approach it. Capable of handling moving objects, the pipeline fuses RGB and depth data to estimate 3D object position and adjust navigation in real time.",
       use_case:
-        "Semantic memory-guided autonomy — enabling robots to perform open-vocabulary search, indoor semantic patrol, re-identification, and dynamic object-aware navigation without full SLAM dependence.",
+        "Search-and-approach autonomy in unstructured or dynamic environments — ideal for assistive robotics, warehouse picking, inspection, and human-robot interaction where object identity is defined in natural language.",
       tech: [
         "ROS2",
         "GroundingDINO",
         "Segment Anything (SAM)",
-        "TF2",
-        "Neo4j",
-        "Nav2",
-        "OccupancyGrid",
+        "CLIP",
+        "Real-Time Path Planning",
         "OpenCV",
-        "Depth",
+        "Depth Estimation",
         "RealSense D435i"
       ],
       status: "in-progress",
-      icon: "🧠",
+      icon: "🤖",
       highlights: [
-        "Open-Vocabulary Object Detection & Segmentation",
-        "Multi-Modal Depth Fusion for 3D Scene Understanding",
-        "Global Pose Anchoring with TF2",
-        "Graph-Based Spatial Memory & Goal Recall",
-        "Nav2-Integrated Semantic Goal Execution"
+        "Prompt-Based Open-Vocabulary Object Detection",
+        "Pixel-Accurate Segmentation with SAM",
+        "RGB-D Fusion for 3D Object Localization",
+        "Dynamic Path Planning for Moving Targets",
+        "Real-Time Quadruped Control"
       ],
-      metrics:
-        "Segmentation IoU (SAM) > 90% | Re-identification accuracy: 93% | Map-frame alignment error < 0.5m | Goal reach success rate: 87% | Perception-to-navigation latency: ~2.5s"
+      "metrics":
+        "Detection latency: ~120ms | Segmentation IoU > 90% | Real-time tracking refresh: 10Hz | Dynamic target reacquisition success rate: 87%"
     },
+
 
     {
       title: "Real-time Robot Fleet Dashboard",
