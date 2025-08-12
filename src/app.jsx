@@ -1330,7 +1330,7 @@ function Projects() {
     {
       title: "SpatialScene: ROS2 Semantic Mapping & Object Graph Logger",
       description:
-        "Engineered a ROS2 system that detects objects via YOLOv5, computes their positions in both robot (base_link) and global (map) frames using TF2, and logs annotated data into a Neo4j knowledge graph. Supports proximity-based scene querying, semantic localization, and memory-based re-alignment for re-identifying objects during revisits. Built with modular ROS2 nodes and integrates OpenAI Vision for optional scene descriptions.",
+        "Engineered a ROS2 system that detects objects via YOLOv8, computes their positions in both robot (base_link) and global (map) frames using TF2, and logs annotated data into a Neo4j knowledge graph. Supports proximity-based scene querying, semantic localization, and memory-based re-alignment for re-identifying objects during revisits. Built with modular ROS2 nodes and integrates OpenAI Vision for optional scene descriptions.",
       use_case:
         "Persistent scene memory and semantic map-building for autonomous robots operating in dynamic or repetitive environments.",
       tech: ["ROS2", "Python", "Neo4j", "TF2", "OpenAI Vision", "Transformations"],
@@ -1373,6 +1373,39 @@ function Projects() {
       ],
       metrics:
         "Object re-identification accuracy: 93% | Map-frame alignment error < 0.5m | Autonomous goal reach rate: 87% | End-to-end latency per 90° cycle: ~2.5s"
+    },
+
+
+
+    {
+      title: "Perceptual Autonomy Stack: Open-Vocabulary Spatial Intelligence for Mobile Robots",
+      description:
+        "Designed and implemented a modular perception stack in ROS2 that integrates GroundingDINO for natural-language-grounded object detection and Segment Anything (SAM) for high-fidelity instance segmentation, fused with depth from Intel RealSense D435i for real-time 3D scene understanding. The system transforms segmented object poses into the global (map) frame via TF2, anchors them into a persistent Neo4j spatial memory graph, and enables semantic re-identification upon revisiting known spaces. Leveraging Nav2, the robot autonomously navigates to dynamically reachable semantic goals, verifying spatial feasibility against the occupancy grid and adapting to changes in object layout.",
+      use_case:
+        "Semantic memory-guided autonomy — enabling robots to perform open-vocabulary search, indoor semantic patrol, re-identification, and dynamic object-aware navigation without full SLAM dependence.",
+      tech: [
+        "ROS2",
+        "GroundingDINO",
+        "Segment Anything (SAM)",
+        "TF2",
+        "Neo4j",
+        "Nav2",
+        "OccupancyGrid",
+        "OpenCV",
+        "Depth",
+        "RealSense D435i"
+      ],
+      status: "in-progress",
+      icon: "🧠",
+      highlights: [
+        "Open-Vocabulary Object Detection & Segmentation",
+        "Multi-Modal Depth Fusion for 3D Scene Understanding",
+        "Global Pose Anchoring with TF2",
+        "Graph-Based Spatial Memory & Goal Recall",
+        "Nav2-Integrated Semantic Goal Execution"
+      ],
+      metrics:
+        "Segmentation IoU (SAM) > 90% | Re-identification accuracy: 93% | Map-frame alignment error < 0.5m | Goal reach success rate: 87% | Perception-to-navigation latency: ~2.5s"
     },
 
     {
