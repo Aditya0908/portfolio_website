@@ -1009,7 +1009,7 @@ import React, { useEffect, useState } from "react";
 import { 
   Github, Linkedin, Mail, Download, Sun, Moon, 
   ChevronDown, ExternalLink, Calendar, MapPin, 
-  Code, Brain, Zap, Database, Cpu, Eye 
+  Code, Brain, Zap, Database, Cpu, Eye, Terminal 
 } from "lucide-react";
 
 // Add fadeIn animation
@@ -1516,10 +1516,10 @@ function About() {
           <GlassCard>
             <h3 className="text-2xl font-semibold mb-4">My Story</h3>
             <p className="text-gray-300 leading-relaxed mb-4">
-              Currently working as an AI/ML Engineer in the Robotics team at Bharat Forge (Kalyani Group), with over 1 year of prior internship experience in the same domain.
+              Currently an AI Applications Engineer at Bharat Forge (Kalyani Group). My journey began in the trenches of Robotics—building ROS2 perception stacks and real-time navigation systems—which gave me a unique perspective on how AI interacts with the physical world.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              My work focuses on ROS2-based mobile robot perception systems, object detection using YOLO, TF publishing, semantic scene annotation, and autonomous navigation. I'm passionate about creating intelligent systems that can perceive and interact with the real world.
+              Today, I am working on architecting On-Premise Generative AI systems. I focus on creating secure, high-performance intelligence that works where cloud-dependency isn't an option. 
             </p>
           </GlassCard>
         </div>
@@ -1865,48 +1865,127 @@ function Skills() {
     </section>
   );
 }
+// function Contact() {
+//   return (
+//     <section id="contact" className="py-20 max-w-4xl mx-auto text-center">
+//       <div className="mb-16">
+//         <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
+//         <p className="text-xl text-gray-400">
+//           Ready to collaborate on robotics and AI projects? Let's build something amazing together!
+//         </p>
+//       </div>
+
+//       <GlassCard className="max-w-2xl mx-auto">
+//         <div className="grid md:grid-cols-2 gap-8">
+//           <div>
+//             <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+//             <p className="text-gray-400 mb-6">
+//               I'm always open to discussing new opportunities, collaborations, or just having a chat about robotics and AI.
+//             </p>
+//             <div className="space-y-3">
+//               <a href="mailto:adityashishjain@gmail.com" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
+//                 <Mail className="w-5 h-5" />
+//                 adityashishjain@gmail.com
+//               </a>
+//               <a href="https://www.linkedin.com/in/aditya-jain-a94425200/" target="_blank" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
+//                 <Linkedin className="w-5 h-5" />
+//                 LinkedIn Profile
+//               </a>
+//               <a href="https://github.com/Aditya0908" target="_blank" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
+//                 <Github className="w-5 h-5" />
+//                 GitHub Profile
+//               </a>
+//             </div>
+//           </div>
+
+//           <div className="flex flex-col gap-4">
+//             <Button className="w-full" onClick={() => window.location.href = 'mailto:adityashishjain@gmail.com'}>
+//               <Mail className="w-4 h-4 mr-2" />
+//               Send Email
+//             </Button>
+//             <Button variant="secondary" className="w-full" onClick={() => window.open('src/resume_adi.pdf', '_blank')}>
+//               <Download className="w-4 h-4 mr-2" />
+//               Download Resume
+//             </Button>
+//           </div>
+//         </div>
+//       </GlassCard>
+//     </section>
+//   );
+// }
+
 function Contact() {
+  // Ensure this string is IDENTICAL to the one in your Hero section
+  const resumePath = "src/resume_adi.pdf"; 
+
   return (
-    <section id="contact" className="py-20 max-w-4xl mx-auto text-center">
-      <div className="mb-16">
-        <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
-        <p className="text-xl text-gray-400">
-          Ready to collaborate on robotics and AI projects? Let's build something amazing together!
-        </p>
+    <section id="contact" className="py-32 max-w-4xl mx-auto px-6 relative z-10">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-4 tracking-tighter">Initialize Connection</h2>
+        <p className="text-slate-400 font-mono text-sm uppercase tracking-[0.3em]">/ Handshake_Protocol</p>
       </div>
 
-      <GlassCard className="max-w-2xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-            <p className="text-gray-400 mb-6">
-              I'm always open to discussing new opportunities, collaborations, or just having a chat about robotics and AI.
+      <GlassCard className="relative overflow-hidden border-slate-800 group">
+        {/* Terminal Window Header */}
+        <div className="absolute top-0 left-0 right-0 h-8 bg-slate-800/50 border-b border-slate-700 flex items-center px-4 gap-2">
+          <div className="w-2 h-2 rounded-full bg-red-500/50"></div>
+          <div className="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+          <div className="w-2 h-2 rounded-full bg-green-500/50"></div>
+          <span className="ml-2 text-[10px] font-mono text-slate-500">terminal.exe — contact_agent</span>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 mt-8">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-white">Let's Build the Future</h3>
+            <p className="text-slate-400 leading-relaxed font-light">
+              I am currently open to collaborations on <span className="text-blue-400">Agentic Workflows</span>, 
+              <span className="text-purple-400"> On-Prem RAG</span>, and <span className="text-emerald-400">Robot Perception</span>. 
+              Drop a message to initialize a conversation.
             </p>
-            <div className="space-y-3">
-              <a href="mailto:adityashishjain@gmail.com" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
-                <Mail className="w-5 h-5" />
-                adityashishjain@gmail.com
+            
+            <div className="space-y-4 pt-4">
+              <a href="mailto:adityashishjain@gmail.com" className="flex items-center gap-4 text-slate-300 hover:text-blue-400 transition-all group/link">
+                <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20 group-hover/link:bg-blue-500 group-hover/link:text-white">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <span className="font-mono text-sm">adityashishjain@gmail.com</span>
               </a>
-              <a href="https://www.linkedin.com/in/aditya-jain-a94425200/" target="_blank" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
-                LinkedIn Profile
-              </a>
-              <a href="https://github.com/Aditya0908" target="_blank" className="flex items-center gap-3 text-gray-300 hover:text-blue-400 transition-colors">
-                <Github className="w-5 h-5" />
-                GitHub Profile
+              <a href="https://www.linkedin.com/in/aditya-jain-a94425200/" target="_blank" className="flex items-center gap-4 text-slate-300 hover:text-blue-400 transition-all group/link">
+                <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20 group-hover/link:bg-blue-500 group-hover/link:text-white">
+                  <Linkedin className="w-5 h-5" />
+                </div>
+                <span className="font-mono text-sm">linkedin.com/in/aditya-jain</span>
               </a>
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <Button className="w-full" onClick={() => window.location.href = 'mailto:adityashishjain@gmail.com'}>
-              <Mail className="w-4 h-4 mr-2" />
-              Send Email
+          <div className="flex flex-col justify-center gap-4">
+            <Button 
+              className="w-full py-4 shadow-[0_0_20px_rgba(37,99,235,0.2)]" 
+              onClick={() => window.location.href = 'mailto:adityashishjain@gmail.com'}
+            >
+              <Terminal className="w-4 h-4 mr-2" />
+              Send_Message()
             </Button>
-            <Button variant="secondary" className="w-full" onClick={() => window.open('src/resume_adi.pdf', '_blank')}>
+            
+            <Button 
+              variant="secondary" 
+              className="w-full py-4 border-slate-700 hover:border-blue-500/50" 
+              onClick={() => window.open(resumePath, '_blank')}
+            >
               <Download className="w-4 h-4 mr-2" />
-              Download Resume
+              Download_Artifact.pdf
             </Button>
+
+            <div className="mt-4 p-4 rounded-lg bg-black/40 border border-slate-800">
+              <div className="flex items-center gap-2 text-[10px] font-mono text-emerald-500 mb-1">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                ENCRYPTION ACTIVE
+              </div>
+              <div className="text-[10px] font-mono text-slate-600 truncate">
+                SHA-256: 8f92b...ae21z_handshake_complete
+              </div>
+            </div>
           </div>
         </div>
       </GlassCard>
