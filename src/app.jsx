@@ -1102,7 +1102,7 @@ function FloatingElements() {
 
 function Hero({ toggleTheme, darkMode }) {
   const typewriterText = useTypewriter(
-    ["Hi, I'm Aditya Jain 👋", "AI/ML Engineer & Roboticist", "Building the Future with Code"],
+    ["Hi, I'm Aditya Jain 👋", "AI Applications Engineer", "Building the Future with Code"],
     70,
     50,
     1500
@@ -1150,21 +1150,26 @@ function Hero({ toggleTheme, darkMode }) {
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
             <span className="flex items-center gap-1">
-              <Cpu className="w-4 h-4" />
-              Robotics
+              <Brain className="w-4 h-4 text-purple-400" />
+              Generative AI & RAG
             </span>
             <span className="flex items-center gap-1">
-              <Brain className="w-4 h-4" />
+              <Database className="w-4 h-4 text-blue-400" />
+              Knowledge Graphs
+            </span>
+            <span className="flex items-center gap-1">
+              <Cpu className="w-4 h-4" />
               ROS2
+            </span>
+            <span className="flex items-center gap-1">
+              <Zap className="w-4 h-4 text-yellow-400" />
+              On-Prem Deployment (DGX B200)
             </span>
             <span className="flex items-center gap-1">
               <Eye className="w-4 h-4" />
               Computer Vision
             </span>
-            <span className="flex items-center gap-1">
-              <Database className="w-4 h-4" />
-              Machine Learning
-            </span>
+
           </div>
         </div>
 
@@ -1210,9 +1215,9 @@ function About() {
   const journey = [
     {
       year: "2024 - Present",
-      title: "AI/ML Engineer - Robotics Team",
+      title: "AI/ML Engineer - AI Applications Team",
       company: "Bharat Forge (Kalyani Group)",
-      description: "Working on ROS2-based mobile robot perception systems, YOLO object detection, and autonomous navigation."
+      description: "Architecting on-premise Generative AI systems, Multi-modal RAG pipelines on DGX B200 hardware, and integrating Knowledge Graphs for industrial intelligence and previously worked on ROS2-based mobile robot perception systems, YOLO object detection, and autonomous navigation."
     },
     {
       year: "2023 - 2024",
@@ -1233,7 +1238,7 @@ function About() {
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold mb-4">About Me</h2>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Passionate about bridging the gap between artificial intelligence and real-world robotics applications
+          Architecting scalable AI applications and intelligent systems, bridging the gap between LLMs and real-world perception.
         </p>
       </div>
 
@@ -1311,6 +1316,39 @@ function About() {
 function Projects() {
   const projects = [
     {
+      title: "Maintenance Intelligence Chatbot (On-Prem RAG)",
+      description:
+        "End-to-end Multimodal RAG system deployed on NVIDIA DGX B200. Enables natural-language querying over industrial manuals and logs. Features high-fidelity structural parsing (PaddleOCR StructureV3) to convert complex tables and layouts into hierarchy-aware vector indices for precision-first retrieval.",
+      use_case:
+        "Enterprise-grade, privacy-first industrial assistant that eliminates cloud dependency while providing grounded, traceable answers from local SOPs and fault logs.",
+      tech: ["FastAPI", "Python", "PaddleOCR", "MinIO", "Vector DB", "NVIDIA DGX B200", "Docker", "CUDA"],
+      status: "completed",
+      icon: "🛠️",
+      highlights: [
+        "Deployed on NVIDIA DGX B200 Hardware",
+        "Multimodal OCR & Structural Parsing",
+        "Stateless Microservices Architecture",
+        "Zero-Cloud Enterprise Security"
+      ],
+      metrics: "Low-latency inference on B200 | Traceable Citations"
+    },
+    {
+      title: "NLQ over Excel (PandasAI Integration)",
+      description:
+        "Developed an LLM-driven interface that converts plain-English questions into executable pandas operations. Features a self-healing loop for error recovery and dynamic schema inference, allowing non-technical users to perform complex data analytics without SQL.",
+      use_case:
+        "Secure, local data analytics for sensitive Excel-based financial or operational records.",
+      tech: ["Python", "PandasAI", "LLMs", "Local Runtime", "Data Visualization"],
+      status: "completed",
+      icon: "📊",
+      highlights: [
+        "Natural Language to Executable Code",
+        "Automatic Error Recovery Loop",
+        "Zero-Cloud Privacy Architecture"
+      ],
+      metrics: "100% Data Privacy | Real-time NL-to-Table"
+    },
+    {
       title: "Autonomous Segmentation & YOLO Training Pipeline",
       description:
         "Designed and implemented a self-hosted pipeline using SAM2 for object segmentation from video inputs, integrated with YOLOv5/v8 for automated model training. Users upload a video and YAML class map, select objects once, and the system auto-generates YOLO-format `.txt` labels and a segmented video. The training module supports YOLO version selection, custom hyperparameters, and outputs best.pt along with mAP/precision metrics.",
@@ -1346,15 +1384,6 @@ function Projects() {
     },
 
 
-    // {
-    //   title: "Voice-Enabled Contextual AI Assistant",
-    //   description: "Sophisticated conversational AI with continuous listening capabilities, contextual memory management, and natural voice interaction. Features advanced NLP processing and intelligent response generation.",
-    //   tech: ["Python", "OpenAI API", "TTS", "STT", "NLP"],
-    //   status: "completed",
-    //   icon: "🗣️",
-    //   highlights: ["Voice Control", "Context Memory", "Natural Language"],
-    //   metrics: "< 500ms response"
-    // },
     {
       title: "Perceptual Autonomy Stack: Multi-Modal Spatial Intelligence for Mobile Robots",
       description:
@@ -1428,75 +1457,6 @@ function Projects() {
   ];
 
   return (
-//     <section id="projects" className="py-20 max-w-6xl mx-auto">
-//       <div className="text-center mb-16">
-//         <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-//         <p className="text-xl text-gray-400">Some of the things I've built and currently working on</p>
-//       </div>
-
-//       <div className="grid md:grid-cols-2 gap-8">
-//         {projects.map((project, index) => (
-//           <GlassCard key={index} className="group hover:scale-105 transition-all duration-300 relative overflow-hidden">
-//             {/* Background gradient overlay */}
-//             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-//             <div className="relative z-10">
-//               <div className="flex justify-between items-start mb-4">
-//                 <div className="flex items-center gap-3">
-//                   <div className="text-3xl">{project.icon}</div>
-//                   <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
-//                     {project.title}
-//                   </h3>
-//                 </div>
-//                 {project.status === "coming-soon" && (
-//                   <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-xs px-2 py-1 rounded-full animate-pulse">
-//                     Coming Soon
-//                   </span>
-//                 )}
-//               </div>
-
-//               <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-//                 {project.description}
-//               </p>
-
-//               {/* Highlights */}
-//               <div className="flex flex-wrap gap-1 mb-4">
-//                 {project.highlights.map((highlight, i) => (
-//                   <span key={i} className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-xs px-2 py-1 rounded-full border border-blue-500/30">
-//                     {highlight}
-//                   </span>
-//                 ))}
-//               </div>
-
-//               {/* Tech stack */}
-//               <div className="flex flex-wrap gap-2 mb-4">
-//                 {project.tech.map((tech, i) => (
-//                   <span key={i} className="bg-gray-800/50 text-gray-300 text-xs px-2 py-1 rounded border border-gray-700/50">
-//                     {tech}
-//                   </span>
-//                 ))}
-//               </div>
-
-//               {/* Metrics and GitHub */}
-//               <div className="flex justify-between items-center">
-//                 <div className="text-xs text-green-400 font-medium">
-//                   {project.metrics}
-//                 </div>
-//                 {project.github && (
-//                   <a href={project.github} target="_blank" className="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">
-//                     <Github className="w-4 h-4" />
-//                     Code
-//                     <ExternalLink className="w-3 h-3" />
-//                   </a>
-//                 )}
-//               </div>
-//             </div>
-//           </GlassCard>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
 
 
     <section id="projects" className="py-20 max-w-6xl mx-auto">
@@ -1575,42 +1535,39 @@ function Skills() {
   const [activeCategory, setActiveCategory] = useState('Core');
 
   const skillCategories = {
-    'Core': [
-      { name: "ROS2", icon: "🤖", level: "Proficient" },
-      { name: "Python", icon: "🐍", level: "Proficient" },
-      { name: "Computer Vision", icon: "👁️", level: "Proficient" },
-      { name: "Machine Learning", icon: "🧠", level: "Novice" },
-      { name: "YOLO", icon: "🎯", level: "Proficient" },
-      { name: "OpenCV", icon: "📸", level: "Proficient" }
+    'AI & LLMs': [
+      { name: "Multi-modal RAG", icon: "📚", level: "Advanced" },
+      { name: "LangChain/Agents", icon: "🦜", level: "Advanced" },
+      { name: "Neo4j / GraphRAG", icon: "🕸️", level: "Intermediate" },
+      { name: "Vector Databases", icon: "💾", level: "Advanced" },
+      { name: "Prompt Engineering", icon: "✍️", level: "Advanced" },
+      { name: "FastAPI / Microservices", icon: "⚡", level: "Advanced" }
     ],
-    'Robotics': [
-      { name: "PCL", icon: "☁️", level: "Novice" },
-      { name: "RealSense", icon: "📡", level: "Advanced" },
-      { name: "SLAM", icon: "🗺️", level: "Novice" },
-      { name: "RViz2", icon: "📊", level: "Proficient" },
-      { name: "Gazebo", icon: "🌍", level: "Novice" },
-      { name: "Navigation", icon: "🧭", level: "Proficient" }
+    'Perception': [
+      { name: "YOLO v5/v8", icon: "🎯", level: "Expert" },
+      { name: "SAM 2", icon: "✂️", level: "Advanced" },
+      { name: "GroundingDINO", icon: "🐕", level: "Intermediate" },
+      { name: "OpenCV", icon: "📸", level: "Advanced" },
+      { name: "PaddleOCR", icon: "📄", level: "Advanced" },
+      { name: "PyTorch", icon: "🔥", level: "Intermediate" }
     ],
-    'Development': [
-      { name: "C++", icon: "⚡", level: "Novice" },
-      { name: "Neo4j", icon: "🕸️", level: "Proficient" },
-      { name: "Docker", icon: "🐳", level: "Proficient" },
-      { name: "Git", icon: "🔀", level: "Proficient" },
-      { name: "Linux", icon: "🐧", level: "Proficient" },
-      { name: "OpenAI API", icon: "🤖", level: "Proficient" },
-      { name: "JavaScript", icon: "💛", level: "Novice" },
+    'Infrastructure': [
+      { name: "NVIDIA DGX B200", icon: "🖥️", level: "Advanced" },
+      { name: "CUDA / GPU Optimization", icon: "⚙️", level: "Intermediate" },
+      { name: "Docker / Containerization", icon: "🐳", level: "Advanced" },
+      { name: "Linux Administration", icon: "🐧", level: "Advanced" },
+      { name: "MinIO (S3)", icon: "☁️", level: "Intermediate" },
+      { name: "Git / CI-CD", icon: "🔀", level: "Advanced" }
     ],
-    'Other': [
-      { name: "Figma", icon: "🎨", level: "Proficient" },
-      { name: "Business Development", icon: "📈", level: "Proficient" },
-      { name: "Notion", icon: "📝", level: "Proficient" },
-      { name: "UI/UX Design", icon: "🖌️", level: "Proficient" },
-      { name: "Canva", icon: "🎭", level: "Proficient" },
-      { name: "Public Speaking", icon: "🎤", level: "Proficient" }
+    'Robotics & Core': [
+      { name: "ROS2 (Humble/Foxy)", icon: "🤖", level: "Advanced" },
+      { name: "Python", icon: "🐍", level: "Expert" },
+      { name: "TF2 / Transforms", icon: "🔄", level: "Advanced" },
+      { name: "C++", icon: "⚡", level: "Intermediate" },
+      { name: "RealSense / LiDAR", icon: "📡", level: "Advanced" },
+      { name: "Nav2", icon: "🧭", level: "Intermediate" }
     ]
-
   };
-
   return (
     <section id="skills" className="py-20 max-w-6xl mx-auto">
       <div className="text-center mb-12">
