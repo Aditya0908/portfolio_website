@@ -1398,7 +1398,6 @@ function Hero({ toggleTheme, darkMode }) {
           System Status: Operational | DGX B200 Optimized
         </div>
 
-        Animated Avatar
         <div className="relative">
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-1 hover:scale-110 transition-all duration-500">
             <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
